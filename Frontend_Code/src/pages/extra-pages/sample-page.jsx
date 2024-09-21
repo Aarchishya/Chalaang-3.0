@@ -14,9 +14,9 @@ export default function SamplePage() {
   // Loan types with specific routes
   const loanTypes = [
     { title: 'Personal Loan', description: 'Quick personal loans with minimal paperwork.', path: '/personalloan' },
-    { title: 'Home Loan', description: 'Get financing for your dream home.', path: '/home-loan' },
-    { title: 'Education Loan', description: 'Education loans for students at low interest rates.', path: '/education-loan' },
-    { title: 'Business Loan', description: 'Boost your business with flexible loan options.', path: '/business-loan' }
+    { title: 'Home Loan', description: 'Get financing for your dream home.', path: '/homeloan' },
+    { title: 'Education Loan', description: 'Education loans for students at low interest rates.', path: '/educationloan' },
+    { title: 'Business Loan', description: 'Boost your business with flexible loan options.', path: '/businessloan' }
   ];
 
   const handleLoanStart = (path) => {

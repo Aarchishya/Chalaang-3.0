@@ -54,7 +54,7 @@ export default function DashboardDefault() {
   const navigate = useNavigate();
 
   const handleNewLoanClick = () => {
-    navigate('/sample-page'); // Navigates to the SamplePage when clicked
+    navigate('/loan-page'); // Navigates to the SamplePage when clicked
   };
   return (
     <Grid container rowSpacing={4.5} columnSpacing={2.75}>
@@ -74,16 +74,16 @@ export default function DashboardDefault() {
 
       {/* rest of your dashboard content */}
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Total applications received" count="4,42,236" percentage={59.3} extra="35,000" />
+        <AnalyticEcommerce title="Total applications received" count="2,236" percentage={59.3} extra="350" />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Pending applications" count="78,250" percentage={70.5} extra="8,900" />
+        <AnalyticEcommerce title="Pending applications" count="8,250" percentage={70.5} extra="900" />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Approval times" count="18,800" percentage={27.4} isLoss color="warning" extra="1,943" />
+        <AnalyticEcommerce title="Approval times" count="8,800" percentage={27.4} isLoss color="warning" extra="943" />
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3}>
-        <AnalyticEcommerce title="Conversion rates" count="$35,078" percentage={27.4} isLoss color="warning" extra="$20,395" />
+        <AnalyticEcommerce title="Conversion rates" count="78%" percentage={27.4} isLoss color="warning" extra="20%" />
       </Grid>
 
       <Grid item md={8} sx={{ display: { sm: 'none', md: 'block', lg: 'none' } }} />

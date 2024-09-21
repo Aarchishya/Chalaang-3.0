@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom'; // Import useNavigate
 
 // material-ui
 import Button from '@mui/material/Button';
@@ -32,6 +32,8 @@ import EyeInvisibleOutlined from '@ant-design/icons/EyeInvisibleOutlined';
 export default function AuthRegister() {
   const [level, setLevel] = useState();
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate(); // Initialize navigate hook
+
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -48,6 +50,17 @@ export default function AuthRegister() {
   useEffect(() => {
     changePassword('');
   }, []);
+
+  // Mock submit function
+  const handleFormSubmit = (values, { setSubmitting }) => {
+    // Simulate form submission and redirect to the login page
+    setTimeout(() => {
+      console.log('Registration successful:', values);
+      setSubmitting(false);
+      // Redirect to login page after form submission
+      navigate('/login');
+    }, 1000); // Simulate a delay
+  };
 
   return (
     <>
@@ -66,6 +79,7 @@ export default function AuthRegister() {
           email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
           password: Yup.string().max(255).required('Password is required')
         })}
+        onSubmit={handleFormSubmit} // Handle form submission and redirection
       >
         {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
           <form noValidate onSubmit={handleSubmit}>

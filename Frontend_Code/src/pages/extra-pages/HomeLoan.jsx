@@ -63,7 +63,7 @@ function DropArea({ children, moveSection }) {
   return <Box ref={drop}>{children}</Box>;
 }
 
-export default function PersonalLoanPage() {
+export default function HomeLoanPage() {
   const [sections, setSections] = useState([
     sectionsConfig.personalInfo,
     sectionsConfig.identityProof,
